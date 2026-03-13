@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Heart pop when favouriting */
+@keyframes heartPop {
+  0%   { transform: scale(0.5); }
+  50%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+@layer utilities {
+  .animate-heartPop {
+    animation: heartPop 0.3s ease-out;
+  }
+}
